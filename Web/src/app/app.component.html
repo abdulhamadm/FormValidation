@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  
+</div>
+<div style="text-align:center">
+ <strong> {{message}} </strong>
+</div>
+
+
+<div class="form-group form-inline">
+  <div *ngIf="error" class="alert alert-danger" role="alert">
+  Invalid input. Allowed only alphabets
+</div> 
+<div *ngIf="success" class="alert alert-success" role="alert">
+  Value is stored successfully
+</div> 
+      <div class="col-sm-12">   
+        Input Value :    
+        <input type="text" class="form-control"  [(ngModel)]="inputValue" 
+        placeholder="Enter Input"  (ngModelChange)="inputCheck()" required>
+      <strong >  </strong>
+        <button type="button"  class="btn btn-primary" (click)="validate()" >Validate</button>
+      </div>
+  </div>
+
+ 
+
